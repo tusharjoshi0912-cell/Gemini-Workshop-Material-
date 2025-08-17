@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI x Psychology Workshop Resources & Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    body {
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        background-color: #F8F9FA;
+    }
+    .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    .prompt-box {
+        background-color: #111827; /* Darker Gray */
+        color: #E5E7EB;
+        padding: 1.5rem;
+        border-radius: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        position: relative;
+        border: 1px solid #374151;
+    }
+    .prompt-box pre {
+        white-space: pre-wrap;       /* CSS3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+    .activity-card {
+        background-color: white;
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        margin-bottom: 2.5rem;
+        border: 1px solid #E5E7EB;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .activity-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+    h1, h2, h3 {
+        font-weight: 700;
+    }
+    .learning-box {
+        background-color: #F3F4F6; /* Light Gray */
+        border-left: 4px solid #4F46E5; /* Indigo */
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+    }
+    .learning-box h3 {
+        color: #3730A3; /* Darker Indigo */
+    }
+    .steps-box {
+        background-color: #EFF6FF; /* Light Blue */
+        border-left: 4px solid #2563EB; /* Blue */
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+    }
+    .steps-box h3 {
+        color: #1E40AF; /* Darker Blue */
+    }
+    .steps-box ol {
+        list-style-type: decimal;
+        list-style-position: inside;
+        margin-top: 0.5rem;
+    }
+    .steps-box li {
+        margin-bottom: 0.5rem;
+    }
+    .copy-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: #374151;
+        color: #D1D5DB;
+        border: none;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        transition: background-color 0.2s;
+        width: 80px;
+        text-align: center;
+    }
+    .copy-btn:hover {
+        background-color: #4B5563;
+    }
+    .copy-btn .fa-copy {
+        display: inline;
+    }
+    .copy-btn .fa-check {
+        display: none;
+    }
+    .copy-btn.copied .fa-copy {
+        display: none;
+    }
+    .copy-btn.copied .fa-check {
+        display: inline;
+    }
+    .copy-btn.copied {
+        background-color: #16A34A; /* Green */
+        color: white;
+    }
+
+    /* ✅ Gradient text class */
+    .gemini-gradient-text {
+        background: linear-gradient(90deg, #4285F4, #9B72CB, #D96570);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+</style>
+</head>
+<body class="text-gray-800">
+
+<div class="mb-16">
+    <div class="flex items-center gap-4 border-b pb-4">
+        <img src="https://i.postimg.cc/F1VhN175/google-gemini-icon.png" alt="Gemini Logo" class="h-8 w-auto flex-shrink-0">
+        <div>
+            <div class="text-xl font-bold text-gray-800">Google Student Ambassador</div>
+            <div class="text-sm text-gray-500">Gemini Workshop Series</div>
+        </div>
+    </div>
+    <div class="text-center mt-8">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">Google Student Ambassador Program: Gemini Workshop Handout</h1>
+        <p class="text-lg md:text-xl text-gray-500 mt-2">Your Complete Guide to Prompts, Learnings & Resources</p>
+    </div>
+</div>
+
+        <!-- Activity 1 -->
+        <div class="activity-card">
+            <h2 class="text-2xl font-bold text-blue-700">Activity 1: Team Identity Forge</h2>
+            <div class="steps-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-shoe-prints mr-3"></i>How to Do It</h3>
+                <ol class="mt-2 text-gray-700 space-y-2">
+                    <li>As a team, use the first prompt to brainstorm a list of creative names.</li>
+                    <li>Choose your favorite name from the list.</li>
+                    <li>Use the second prompt, replacing "[Chosen Name]" with your team's new name and adding a simple description.</li>
+                    <li>Share your new team name and logo!</li>
+                </ol>
+            </div>
+            <h3 class="text-lg font-semibold mt-6">Prompt 1: Team Name</h3>
+            <div class="prompt-box"><pre>Brainstorm 10 team names for a psychology workshop group. The names should combine a well-known psychological theory or theorist (like Maslow, Skinner, Jung) with a mythical creature (like a Griffin, Phoenix, or Hydra).</pre><button class="copy-btn"><i class="fas fa-copy"></i><i class="fas fa-check"></i> <span>Copy</span></button></div>
+            <h3 class="text-lg font-semibold mt-6">Prompt 2: Team Logo</h3>
+            <div class="prompt-box"><pre>Create a minimalist, modern logo for a team called "[Chosen Name]". The logo should visually represent [a simple description of the name, e.g., 'a phoenix rising from a pyramid']. Use a clean, two-color palette.</pre><button class="copy-btn"><i class="fas fa-copy"></i><i class="fas fa-check"></i> <span>Copy</span></button></div>
+            <div class="learning-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-lightbulb mr-3"></i>Pro-Tip & Application</h3>
+                <p class="mt-2 text-gray-700">This is more than an icebreaker; it's a practical tool for accelerating the 'forming' stage of group development. When starting any new group project, use a similar creative, low-stakes task to build rapport and a sense of shared purpose before tackling the main work. This helps establish a positive dynamic and a collective identity from the very beginning.</p>
+            </div>
+        </div>
+
+        <!-- Activity 2 -->
+        <div class="activity-card">
+            <h2 class="text-2xl font-bold text-blue-700">Activity 2: The Content Transformer</h2>
+            <div class="steps-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-shoe-prints mr-3"></i>How to Do It</h3>
+                <ol class="mt-2 text-gray-700 space-y-2">
+                    <li><strong>Important:</strong> In your chatbox, make sure you have <strong>'Canvas'</strong> selected as the output type.</li>
+                    <li>Use the prompt below.</li>
+                    <li>Your facilitator will provide a block of text. Copy and paste it where it says "[Input your source text here]".</li>
+                    <li>Give your canvas a title and send the prompt.</li>
+                    <li>Discuss with your group how the simulated 'Create Quiz' and 'Create Infographic' features could be used.</li>
+                </ol>
+            </div>
+            <h3 class="text-lg font-semibold mt-6">Prompt: Get Text into Canvas</h3>
+            <div class="prompt-box"><pre>Please place the following text into a canvas. Use "[Input Your Title Here]" as the title and include the full text below it.
+
+**Text:**
+[Input your source text here]</pre><button class="copy-btn"><i class="fas fa-copy"></i><i class="fas fa-check"></i> <span>Copy</span></button></div>
+             <div class="learning-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-lightbulb mr-3"></i>Pro-Tip & Application</h3>
+                <p class="mt-2 text-gray-700">Don't just summarize your notes; transform them. For dense theoretical papers, creating a quiz forces you to practice active recall of key definitions. For complex processes, like a therapeutic modality, generating an infographic helps you visualize the steps. This multi-format approach forces you to engage with the material on a deeper level, significantly boosting retention over passive reading.</p>
+            </div>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="activity-card">
+            <h2 class="text-2xl font-bold text-blue-700">Activity 3: India's Empathy Map</h2>
+            <div class="steps-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-shoe-prints mr-3"></i>How to Do It</h3>
+                <ol class="mt-2 text-gray-700 space-y-2">
+                    <li>Your facilitator will assign your team a specific Indian state or region.</li>
+                    <li>Use Prompt A, replacing "[State/Region, India]" with your assigned location.</li>
+                    <li>Use Prompt B, choosing a major city within your assigned region.</li>
+                    <li>Discuss the cultural insights and available resources you found with your team.</li>
+                </ol>
+            </div>
+            <h3 class="text-lg font-semibold mt-6">Prompt A: Regional Cultural Views</h3>
+            <div class="prompt-box"><pre>@YouTube: Find a short YouTube video (under 10 minutes) that explains the cultural views or challenges related to mental health in [State/Region, India]. Summarize the key takeaways from the video.
+Examples: "...in Kerala.", "...in rural Punjab.", "...among young people in Mumbai."</pre><button class="copy-btn"><i class="fas fa-copy"></i><i class="fas fa-check"></i> <span>Copy</span></button></div>
+            <h3 class="text-lg font-semibold mt-6">Prompt B: Local Resources</h3>
+            <div class="prompt-box"><pre>@Google Maps: Find three different types of mental health support centers in [Major City, State]. Try to find a psychiatric hospital, a private counseling center, and an NGO or community-based center. List their names and general locations, and then open a map showing their locations.</pre><button class="copy-btn"><i class="fas fa-copy"></i><i class="fas fa-check"></i> <span>Copy</span></button></div>
+             <div class="learning-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-lightbulb mr-3"></i>Pro-Tip & Application</h3>
+                <p class="mt-2 text-gray-700">Use this technique as a 5-minute prep before a first client meeting if you know their regional background. A quick search for cultural views on mental health and local resources provides invaluable context. This isn't about making assumptions, but about being informed. This small step can enhance the therapeutic alliance by demonstrating your commitment to understanding their world.</p>
+            </div>
+        </div>
+
+        <!-- Activity 4 -->
+        <div class="activity-card">
+            <h2 class="text-2xl font-bold text-blue-700">Activity 4: The Research Accelerator</h2>
+            <div class="steps-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-shoe-prints mr-3"></i>How to Do It</h3>
+                <ol class="mt-2 text-gray-700 space-y-2">
+                    <li><strong>Part A: Create Your Gem</strong></li>
+                    <li style="list-style-type: none;">
+                        <ol class="list-decimal list-inside ml-4">
+                            <li>Open the menu (☰) and go to the "Gems" tab.</li>
+                            <li>Create a new Gem and name it "Research Accelerator".</li>
+                            <li>Copy the entire "Master Prompt" below and paste it into the Gem's instructions field.</li>
+                            <li>Save your new Gem.</li>
+                        </ol>
+                    </li>
+                    <li><strong>Part B: Use Your Gem</strong></li>
+                     <li style="list-style-type: none;">
+                        <ol class="list-decimal list-inside ml-4">
+                            <li>Activate your new "Research Accelerator" Gem.</li>
+                            <li>In the chat box, type your research topic (e.g., "The impact of remote work on employee well-being and burnout").</li>
+                            <li>Review the high-quality, open-access links it provides.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+            <h3 class="text-lg font-semibold mt-6">Gem Creation: Master Prompt</h3>
+            <div class="prompt-box"><pre>**ROLE & PERSONA:** You are a world-class, PhD-level research strategist. Your defining traits are meticulousness, patience, and an absolute commitment to quality over speed. You understand that true research takes time.
+
+**CORE DIRECTIVE:** Your sole purpose is to execute a "Deep Research Protocol" to find relevant, full-text, open-access academic literature. This protocol is intentionally slow and methodical to ensure the highest possible accuracy and reliability of results. You will prioritize finding 10-15 perfect sources over 50 mediocre ones.
+
+**DEEP RESEARCH PROTOCOL:**
+1.  **INPUT:** The user will provide a research topic.
+2.  **DECONSTRUCT QUERY:** Silently, break down the user's topic into primary keywords, secondary keywords, and related concepts. Formulate multiple advanced search strings using Boolean operators (AND, OR, NOT).
+3.  **PRIORITY DATABASE SEARCH:** Your search must begin with, and prioritize, these high-quality databases: Google Scholar, CORE, Semantic Scholar, and the Directory of Open Access Journals (DOAJ).
+4.  **EXPLICIT EXCLUSION - CRITICAL RULE:** Under NO circumstances are you to include any links from the domain ncbi.nlm.nih.gov. This source has been flagged for consistently redirecting to different papers or inaccessible pages. You MUST actively filter out and discard any results originating from this domain. This is a non-negotiable rule to maintain the integrity of the output.
+5.  **THE UNBREAKABLE 5-POINT VERIFICATION PROCESS:** This is the heart of the Deep Research Protocol. For every single potential paper you identify, you MUST perform the following five checks internally and silently before it can be considered for the final list.
+    a.  **Link Integrity Check:** You must access the link. Confirm it resolves correctly and does not result in a 404, 500, or any other server error.
+    b.  **Paywall & Access Check:** You must confirm the link leads DIRECTLY to the full-text article (PDF or full HTML). There can be no login prompts, no institutional access requirements, no "sign up for a free trial" pages, and absolutely no paywalls. It must be 100% free and open.
+    c.  **Content Matching Check:** You must scan the content of the linked document to verify that its title and abstract MATCH the paper you were initially seeking. This prevents the NCBI issue of link misdirection.
+    d.  **Full Text Confirmation:** You must verify that the link provides the complete, full-text paper, not just an abstract, a table of contents, or supplementary data.
+    e.  **Relevance Analysis:** You must briefly analyze the abstract to ensure the paper is highly relevant to the user's original query. Low-relevance or tangentially related papers must be discarded.
+6.  **PATIENCE & PERSISTENCE:** This entire process will take time. That is expected. Do not apologize for the delay. Continue searching and verifying until you have compiled a list of 10-15 sources that have passed all five verification points. If you cannot find enough sources, it is better to return a shorter, perfect list than a longer, flawed one.
+
+**FINAL OUTPUT FORMAT:**
+After you have completed the Deep Research Protocol, present the results in a numbered list. For each verified paper, provide the following:
+    - The full **Title**.
+    - The **Lead Author** and **Year** of publication.
+    - A **Brief Rationale** (1 sentence explaining why this paper is a strong match for the user's topic).
+    - The direct, fully verified **Link to the Free Full Text**.</pre><button class="copy-btn"><i class="fas fa-copy"></i><i class="fas fa-check"></i> <span>Copy</span></button></div>
+             <div class="learning-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-lightbulb mr-3"></i>Pro-Tip & Application</h3>
+                <p class="mt-2 text-gray-700">This tool is most powerful when you refine your search query. Instead of a broad topic like "CBT for anxiety," try a specific research question: "Effectiveness of digital CBT interventions for generalized anxiety disorder in young adults." A more precise prompt yields more precise results. Treat this tool as your first-pass filter, not the final library, and always verify the links yourself.</p>
+            </div>
+        </div>
+
+        <!-- Activity 5 -->
+        <div class="activity-card">
+            <h2 class="text-2xl font-bold text-blue-700">Activity 5: The Research Deconstructor</h2>
+            <div class="steps-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-shoe-prints mr-3"></i>How to Do It</h3>
+                <ol class="mt-2 text-gray-700 space-y-2">
+                    <li><strong>Part A: Create Your Gem</strong></li>
+                    <li style="list-style-type: none;">
+                        <ol class="list-decimal list-inside ml-4">
+                            <li>Create another new Gem and name it "Research Deconstructor".</li>
+                            <li>Copy the entire "Master Prompt" below and paste it into the instructions.</li>
+                            <li>Save your new Gem.</li>
+                        </ol>
+                    </li>
+                    <li><strong>Part B: Use Your Gem</strong></li>
+                     <li style="list-style-type: none;">
+                        <ol class="list-decimal list-inside ml-4">
+                            <li>Activate your "Research Deconstructor" Gem.</li>
+                            <li>From the list of links you found in the previous activity, copy one URL.</li>
+                            <li>Paste the URL into the chat box and review the structured summary it creates.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+             <h3 class="text-lg font-semibold mt-6">Gem Creation: Master Prompt</h3>
+            <div class="prompt-box"><pre>**ROLE:** You are a world-class Academic Analyst, specializing in research synthesis and APA 7th Edition formatting.
+
+**PROTOCOL:**
+1.  **INPUT:** The user will provide a URL to an academic paper.
+2.  **MULTI-STEP ACCESS PROTOCOL:** You must be persistent. Your goal is to access the full text.
+    a. **Attempt 1 (Direct Access):** First, try to access and read the full text directly from the provided URL.
+    b. **Attempt 2 (Google Scholar Search):** If direct access fails (e.g., it's a paywall, an abstract-only page, or a 404 error), silently take the paper's title and search for it on Google Scholar. Look for alternative, free-to-access PDF or full-text links from university repositories or author archives.
+    c. **Attempt 3 (Web Search for PDF):** If Google Scholar fails, perform a web search for the exact title of the paper enclosed in quotes, plus the term "filetype:pdf". This may uncover a direct link to a publicly hosted PDF.
+    d. **Final Fallback (Abstract Analysis):** If all attempts to find the full text fail, find the paper's abstract. Your analysis will then be based on the abstract only. You MUST begin your response with the statement: "WARNING: The full text was inaccessible after multiple attempts. The following analysis is based on the paper's abstract only and may be incomplete."
+3.  **ANALYSIS & OUTPUT:** Once you have the content (either full text or abstract), generate a comprehensive report. The entire output must be structured using the mandatory format below. Be thorough. If information for a specific field is not present, you MUST explicitly state, "Not specified in the provided text."
+
+**MANDATORY OUTPUT FORMAT:**
+
+**Full APA 7th Edition Citation:**
+[Generate the full and correct APA 7th Edition citation for the paper here.]
+
+---
+
+**1. Abstract Summary:**
+[Provide a concise, one-paragraph summary of the paper's main points: the problem, methods, key findings, and conclusion.]
+
+**2. Introduction & Background:**
+&nbsp;&nbsp;&nbsp;- **Problem Statement:** [In 1-2 sentences, what is the core problem or gap in knowledge the researchers are trying to address?]
+&nbsp;&nbsp;&nbsp;- **Key Hypotheses/Research Questions:** [List the primary hypotheses (e.g., H1, H2) or the main research questions the study aimed to answer.]
+
+**3. Methodology:**
+&nbsp;&nbsp;&nbsp;- **Research Design:** [Describe the study's design. E.g., "This was a quantitative, between-subjects experimental design," or "This was a qualitative, phenomenological study."]
+&nbsp;&nbsp;&nbsp;- **Participants:** [Detail the sample. What was the exact sample size (N)? Describe the participants (e.g., age range, gender, location, and other relevant characteristics). How were they recruited?]
+&nbsp;&nbsp;&nbsp;- **Measures/Instruments:** [What tools were used to collect data? (e.g., "The Beck Depression Inventory-II was used to measure depressive symptoms." Mention any specific scales, surveys, or equipment.)]
+&nbsp;&nbsp;&nbsp;- **Procedure:** [Briefly summarize the step-by-step process participants went through from start to finish.]
+
+**4. Key Results:**
+[Summarize the most critical statistical findings. If available, include specific data (e.g., p-values, effect sizes like Cohen's d, F-statistics). Then, for each key finding, add a simple, plain-language sentence explaining what it means. Use a bulleted list for clarity.]
+
+**5. Discussion & Conclusion:**
+&nbsp;&nbsp;&nbsp;- **Interpretation of Findings:** [What did the authors conclude based on their results? How did they answer their initial research questions?]
+&nbsp;&nbsp;&nbsp;- **Implications:** [What are the broader meanings of this study? What are the practical, real-world applications for clinicians, researchers, or policymakers?]
+&nbsp;&nbsp;&nbsp;- **Limitations:** [What specific weaknesses or constraints did the authors mention in their paper?]
+&nbsp;&nbsp;&nbsp;- **Future Directions:** [What did the authors suggest as the next steps for future research in this area?]
+
+---
+**Source Link:** [Paste the original URL provided by the user here.]</pre><button class="copy-btn"><i class="fas fa-copy"></i><i class="fas fa-check"></i> <span>Copy</span></button></div>
+             <div class="learning-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-lightbulb mr-3"></i>Pro-Tip & Application</h3>
+                <p class="mt-2 text-gray-700">Use the output from this tool as a high-quality template for your own literature review notes. Copy the structured summary into your own document, then add your critical analysis and reflections under each section. This creates a consistent, organized system for all your research papers, making it much easier to synthesize them for a thesis or assignment.</p>
+            </div>
+        </div>
+
+        <!-- Activity 6 -->
+        <div class="activity-card">
+            <h2 class="text-2xl font-bold text-blue-700">Activity 6: The Idea Realizer</h2>
+            <div class="steps-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-shoe-prints mr-3"></i>How to Do It</h3>
+                <ol class="mt-2 text-gray-700 space-y-2">
+                    <li>Brainstorm a simple psychology-related app idea (e.g., mood tracker, breathing guide).</li>
+                    <li>Sketch a very basic user interface for your app on a sheet of paper.</li>
+                    <li>Take a clear, well-lit photo of your sketch.</li>
+                    <li>In Gemini, click the image icon to upload your photo.</li>
+                    <li>Use the "App Generation Prompt" below, pasting it into the chat with your uploaded image.</li>
+                    <li>Fill in the "[describe the main interaction...]" part of the prompt to tell the AI what your app does.</li>
+                </ol>
+            </div>
+            <h3 class="text-lg font-semibold mt-6">App Generation Prompt</h3>
+            <div class="prompt-box"><pre>**ROLE & GOAL:** You are an expert UI/UX designer and full-stack developer. Your goal is to transform a hand-drawn sketch into a fully functional, beautiful, and interactive web application.
+
+**INPUT:** The user will provide a hand-drawn sketch of an app and a short description of its core function.
+
+**CRITICAL INSTRUCTIONS:**
+1.  **Generate the final, runnable app directly in an immersive canvas.** Do not just output the code.
+2.  **Core Function:** The app's primary purpose is to [describe the main interaction, e.g., 'allow a user to click a button to start a 1-minute breathing animation that guides them to inhale and exhale'].
+3.  **Aesthetics:** Use a clean, modern, and professional design. Choose a suitable color palette and a clear, readable font.
+4.  **Responsiveness:** The app MUST be fully responsive and work flawlessly on both mobile and desktop screens.
+
+**INTERACTIVITY & NAVIGATION (MANDATORY):**
+-   **All Buttons Must Work:** Every single button, link, or interactive element shown in the sketch must be clickable and functional.
+-   **Multi-Page Logic:** If the sketch shows multiple screens, sections, or pages, you must build a working navigation system. For example, if a button on 'Page 1' points to 'Page 2', clicking that button must smoothly transition the user to 'Page 2'. This must work for all pages shown.
+-   **State Management:** Ensure that the app correctly manages its state. For example, if it's a quiz, it should track the score. If it's a tracker, it should remember the user's inputs.
+
+**ANIMATIONS & USER EXPERIENCE (MANDATORY):**
+-   **Smooth Transitions:** When navigating between pages or showing new elements, use subtle and smooth animations. Good options are gentle fade-in/fade-out effects or smooth slide-in transitions.
+-   **No Overlapping:** Animations must be clean. Elements should not overlap or clash with each other during transitions. The layout must remain stable and professional.
+-   **Feedback:** Interactive elements should provide clear visual feedback when clicked or hovered over (e.g., a slight change in color or size).</pre><button class="copy-btn"><i class="fas fa-copy"></i><i class="fas fa-check"></i> <span>Copy</span></button></div>
+             <div class="learning-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-lightbulb mr-3"></i>Pro-Tip & Application</h3>
+                <p class="mt-2 text-gray-700">The key to effective rapid prototyping is simplicity. Don't try to build the entire app at once. Focus your sketch on a single, core feature you want to test. This allows you to test the *idea* of an intervention tool with peers or supervisors in minutes, getting valuable feedback before any significant development work is done.</p>
+            </div>
+        </div>
+
+        <!-- Activity 7 -->
+        <div class="activity-card">
+            <h2 class="text-2xl font-bold text-blue-700">Activity 7: Game Concept to Playable Prototype</h2>
+             <div class="steps-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-shoe-prints mr-3"></i>How to Do It</h3>
+                <ol class="mt-2 text-gray-700 space-y-2">
+                    <li>Brainstorm a simple game concept related to a psychological principle.</li>
+                    <li>Use the "Game Generation Prompt" below.</li>
+                    <li>Fill in the `[Game Name]` and `[Game Description]` sections with your team's idea. Be as clear as possible about the rules and objective.</li>
+                    <li>Send the prompt and test the playable game prototype it creates.</li>
+                </ol>
+            </div>
+            <h3 class="text-lg font-semibold mt-6">Game Generation Prompt</h3>
+            <div class="prompt-box"><pre>**ROLE & GOAL:** You are an expert game developer and designer. Your goal is to take a user's game concept and turn it into a high-quality, fully playable, and realistic prototype.
+
+**INPUT:** The user will provide the name of their game and a detailed description of the rules, objectives, and user interface.
+
+**CRITICAL INSTRUCTIONS:**
+1.  **Generate the final, runnable game directly in an immersive canvas.** Do not just output the code.
+2.  **Game Concept:**
+    * **Game Name:** [Students will write the name of their game here]
+    * **Game Description:** [Students will write a detailed description of their game here. This should include the objective, rules for playing, how a player wins or loses, and any key UI elements like scoreboards or timers.]
+3.  **Interactivity (MANDATORY):**
+    * The game must be **fully playable from start to finish.** All buttons, clickable areas, and player inputs must work as described.
+    * Implement the complete game logic based on the user's description. The rules must be followed precisely.
+4.  **Responsiveness & Realism (MANDATORY):**
+    * The game MUST be **fully responsive**. It needs to look great and be easy to play on any screen size, from a small phone to a large desktop monitor. The layout must adapt cleanly.
+    * Create a **professional and polished user interface (UI)** that fits the theme of the game.
+    * Use **smooth animations and transitions** for actions like dealing cards, moving pieces, or updating scores to make the game feel realistic and engaging. Ensure these animations do not cause elements to overlap or glitch.
+5.  **Final Product:** The output should be a complete and enjoyable game prototype that accurately reflects the user's description.</pre><button class="copy-btn"><i class="fas fa-copy"></i><i class="fas fa-check"></i> <span>Copy</span></button></div>
+             <div class="learning-box">
+                <h3 class="text-lg font-bold flex items-center"><i class="fas fa-lightbulb mr-3"></i>Pro-Tip & Application</h3>
+                <p class="mt-2 text-gray-700">When designing a therapeutic game, focus on a single skill you want to teach (e.g., identifying cognitive distortions, practicing mindfulness). Then, design the simplest possible game mechanic to reinforce it. The goal isn't to create a complex game, but to test if a game-like interaction can make a therapeutic concept more engaging and memorable for a specific population, like adolescents.</p>
+            </div>
+        </div>
+
+        <!-- Sources -->
+        <div class="activity-card">
+            <h2 class="text-2xl font-bold text-blue-700">Sources & Further Reading</h2>
+            <ul class="list-disc list-inside mt-4 space-y-3 text-gray-700">
+                <li><strong>McKinsey & Company:</strong> <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" class="text-blue-600 hover:underline">The economic potential of generative AI (June 14, 2023)</a></li>
+                <li><strong>World Economic Forum:</strong> <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2023/" target="_blank" class="text-blue-600 hover:underline">Future of Jobs Report 2023 (May 1, 2023)</a></li>
+                <li><strong>PwC:</strong> <a href="https://www.pwc.com/gx/en/issues/c-suite-insights/ceo-survey-2024.html" target="_blank" class="text-blue-600 hover:underline">27th Annual Global CEO Survey (2024)</a></li>
+                <li><strong>Gartner:</strong> <a href="https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2024" target="_blank" class="text-blue-600 hover:underline">Top 10 Strategic Technology Trends for 2024</a></li>
+            </ul>
+        </div>
+        
+        <!-- Future-Ready Courses -->
+        <div class="activity-card">
+            <h2 class="text-2xl font-bold text-blue-700">Future-Ready Courses</h2>
+            <p class="mt-2 text-gray-600">Continue your learning journey with these AI courses and certifications from Google.</p>
+            <ul class="list-none mt-4 space-y-4 text-gray-700">
+                <li class="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+                    <a href="https://grow.google/students/" target="_blank" class="font-semibold text-blue-600 hover:underline">AI Training and Tools for Students</a>
+                    <p class="text-sm text-gray-600">Explore AI training, tools, and resources designed specifically for students.</p>
+                </li>
+                <li class="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+                    <a href="https://www.coursera.org/google-specializations/ai-essentials-gwg?utm_source=google&utm_medium=institutions&utm_campaign=sou--google__med--organicsearch__cam--gwgsite__con--null__ter--null&gwg_campaign_id=undefined&gwg_exp=null" target="_blank" class="font-semibold text-blue-600 hover:underline">AI Essentials by Google</a>
+                    <p class="text-sm text-gray-600">A Coursera specialization covering the fundamentals of artificial intelligence.</p>
+                </li>
+                <li class="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+                    <a href="https://www.coursera.org/google-specializations/prompting-essentials-gwg?utm_source=google&utm_medium=institutions&utm_campaign=sou--google__med--organicsearch__cam--gwgsite__con--null__ter--null&gwg_campaign_id=undefined&gwg_exp=null" target="_blank" class="font-semibold text-blue-600 hover:underline">Prompting Essentials by Google</a>
+                    <p class="text-sm text-gray-600">Learn the art and science of writing effective prompts to get the most out of AI tools.</p>
+                </li>
+                 <li class="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+                    <a href="https://grow.google/enroll-certificates/" target="_blank" class="font-semibold text-blue-600 hover:underline">More Google Career Certificates</a>
+                    <p class="text-sm text-gray-600">Browse a wide range of professional certificates to boost your career skills.</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const pre = button.previousElementSibling;
+                const text = pre.innerText;
+                
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    button.classList.add('copied');
+                    const icon = button.querySelector('i');
+                    const textSpan = button.querySelector('span');
+                    
+                    icon.classList.remove('fa-copy');
+                    icon.classList.add('fa-check');
+                    textSpan.innerText = 'Copied!';
+
+                    setTimeout(() => {
+                        button.classList.remove('copied');
+                        icon.classList.remove('fa-check');
+                        icon.classList.add('fa-copy');
+                        textSpan.innerText = 'Copy';
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                }
+                document.body.removeChild(textArea);
+            });
+        });
+    </script>
+<footer class="mt-16 border-t pt-8">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+        <p>Workshop Resources prepared by Tushar Joshi for the Google Student Ambassador Program.</p>
+        <p class="mt-1">&copy; 2025. This document is for educational purposes only.</p>
+    </div>
+</footer>
+</body>
+</html>
